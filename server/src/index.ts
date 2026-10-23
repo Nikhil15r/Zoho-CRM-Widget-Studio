@@ -108,7 +108,7 @@ export function createApp(dbInstance?: any) {
 const isDirectRun = (process.argv[1] && (process.argv[1].endsWith('index.js') || process.argv[1].endsWith('index.ts'))) && !process.env.VITEST;
 if (isDirectRun && process.env.NODE_ENV !== 'test') {
   const PORT = parseInt(process.env.PORT || '3001', 10);
-  const HOST = process.env.HOST || '127.0.0.1';
+  const HOST = process.env.HOST || '0.0.0.0';
 
   const { app } = createApp();
   app.listen(PORT, HOST, () => {
