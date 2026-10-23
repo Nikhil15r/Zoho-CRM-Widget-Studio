@@ -1,0 +1,27 @@
+{
+  "name": "zoho-crm-widget-studio",
+  "version": "1.0.0",
+  "description": "Standalone Developer IDE for Zoho CRM Widgets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w shared && npm run build -w server && npm run build -w client",
+    "start": "node server/dist/index.js",
+    "test": "npm run test -w server && npm run test -w client",
+    "test:server": "npm run test -w server",
+    "test:client": "npm run test -w client",
+    "test:e2e": "playwright test"
+  },
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "concurrently": "^8.2.2"
+  }
+}
