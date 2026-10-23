@@ -1,6 +1,11 @@
 # Zoho CRM Widget Studio
 
-A standalone developer IDE for building, previewing, debugging, and testing Zoho CRM widgets with high-fidelity SDK simulation, an embedded SQLite mock CRM engine, and an SSRF-protected third-party API playground.
+A standalone developer IDE for building, previewing, debugging, and testing Zoho CRM widgets with high-fidelity SDK simulation, an embedded SQLite mock CRM engine, an SSRF-protected third-party API playground, and a built-in AI Copilot.
+
+[![Live Application](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://zoho-crm-widget-studio.onrender.com/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nikhil15r/Zoho-CRM-Widget-Studio)
+
+> 🌐 **Live Web Application**: [https://zoho-crm-widget-studio.onrender.com/](https://zoho-crm-widget-studio.onrender.com/)
 
 ---
 
@@ -216,9 +221,16 @@ This compiles the `@zoho-studio/shared` package, bundles the `@zoho-studio/clien
 ### Starting in Production
 ```powershell
 set PORT=3001
-set HOST=127.0.0.1
+set HOST=0.0.0.0
 node server/dist/index.js
 ```
+
+### Live Cloud Deployment (Render)
+The application is pre-configured for full-stack cloud deployment on Render (running Express, SQLite, and the Vite UI together):
+* **Live URL**: [https://zoho-crm-widget-studio.onrender.com/](https://zoho-crm-widget-studio.onrender.com/)
+* **Build Command**: `npm run build`
+* **Start Command**: `npm start`
+* **Environment**: `Node` (auto-detects `PORT` and binds to `0.0.0.0`)
 
 ### Remote Hosting Requirements
 If deploying to a server (e.g. AWS EC2, DigitalOcean, or Docker container):
